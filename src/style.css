@@ -1,0 +1,287 @@
+:root {
+  font-family: 'Nunito', system-ui, sans-serif;
+  color: #1f245d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f5f4e2;
+  overflow: hidden;
+}
+
+.app-shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 320px;
+  min-width: 320px;
+  background: #1f205b;
+  color: #fff;
+  padding: 18px 12px 24px;
+  height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.brand {
+  padding: 0 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 14px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.brand h1 span {
+  color: #ffb41f;
+}
+
+.brand p {
+  margin: 6px 0 0;
+  color: #b9bfd9;
+  font-size: 14px;
+}
+
+.nav-group {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.nav-group small {
+  letter-spacing: 0.2em;
+  color: #7b82ae;
+  margin: 8px 12px 4px;
+  font-size: 12px;
+}
+
+.nav-item {
+  color: #cad0ea;
+  text-decoration: none;
+  font-size: 24px;
+  border-radius: 18px;
+  padding: 12px 16px;
+  transition: 0.2s ease;
+}
+
+.nav-item.router-link-exact-active {
+  color: #fff;
+  background: linear-gradient(90deg, #1ea8ff, #7466ff);
+  box-shadow: 0 8px 24px rgba(30, 168, 255, 0.35);
+}
+
+.content {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 24px 28px;
+}
+
+.page-title {
+  font-size: 58px;
+  margin: 0 0 8px;
+  font-weight: 900;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #5e6f96;
+  margin: 0 0 20px;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.hero {
+  background: radial-gradient(circle at 70% 10%, rgba(255, 171, 76, 0.3), transparent 30%),
+    linear-gradient(105deg, #28236b, #091445);
+  color: white;
+  border-radius: 28px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin: 0 0 8px;
+}
+
+.hero p {
+  font-size: 24px;
+  max-width: 760px;
+  color: #c8cfff;
+  margin: 0 0 14px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font: 800 28px/1 'Nunito', sans-serif;
+}
+
+.btn.primary {
+  background: #ff9800;
+  color: #11195e;
+}
+
+.btn.ghost {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.stat {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px;
+  border-bottom: 5px solid #22a3f6;
+}
+
+.stat h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.stat .num {
+  font-size: 42px;
+  font-weight: 900;
+  margin: 8px 0 2px;
+}
+
+.cards-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-cover {
+  height: 190px;
+  display: grid;
+  place-items: center;
+  font-size: 72px;
+}
+
+.card-body {
+  padding: 18px 20px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 38px;
+}
+
+.card p {
+  margin: 0 0 14px;
+  color: #5f6d8f;
+  font-size: 24px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #eef2ff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.progress {
+  height: 10px;
+  background: #e8edf6;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #22b5ff, #6a54f9);
+}
+
+@media (max-width: 1400px) {
+  .sidebar {
+    width: 260px;
+    min-width: 260px;
+  }
+
+  .brand h1 {
+    font-size: 40px;
+  }
+
+  .nav-item {
+    font-size: 20px;
+  }
+
+  .page-title {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .hero h2 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 20px;
+  }
+
+  .card h3 {
+    font-size: 30px;
+  }
+
+  .card p {
+    font-size: 20px;
+  }
+}
