@@ -9,14 +9,14 @@
           <button class="btn ghost">🧠 Quick Quiz</button>
         </div>
       </div>
-      <div style="font-size:140px">🌱</div>
+      <div style="font-size:100px">🌱</div>
     </div>
 
     <div class="grid-4">
       <article class="stat" v-for="item in stats" :key="item.label" :style="{borderBottomColor:item.color}">
         <h3>{{ item.icon }}</h3>
         <div class="num">{{ item.value }}</div>
-        <p class="subtitle" style="margin:0;font-size:30px">{{ item.label }}</p>
+        <p class="subtitle" style="margin:0;font-size:20px">{{ item.label }}</p>
       </article>
     </div>
   </section>
